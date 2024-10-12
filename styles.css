@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "autumn";
+    src: url("./assets/font/Autumn in September.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 0;
+    text-align: center;
+    background-image: url("./assets/img/background.jpg");
+    background-size: cover;
+   
+}   
+.contenedorPrincipal {
+    width: 85%;
+    height: 85vh;
+    background-color: white;
+    padding: 4rem;
+    border: 0.2rem solid #EA9AB2;
+    border-radius: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: #E27396;
+    font-family: "autumn";
+}
+.contenedorPrincipal .contenedorIngresarTarea{
+    display: flex;
+    align-items: center;
+}
+.ingresarTarea {
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+    padding: 1rem;
+    border: .4rem solid #EA9AB2;
+    border-radius: 1rem;
+}
+.ingresarTarea:focus {
+    border-color: #E27396;
+    outline: none;
+}
+.agregar {
+    width: 5rem;
+    height: 4rem;
+    color: white;
+    background-color: #EA9AB2;
+    font-size: 22px;
+    border-radius: 1rem;
+    border: 0px solid transparent;
+    cursor: pointer;
+    user-select: none;
+    &:hover{
+        background-color: #E27396;
+    }
+}
+.listaTareas {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    color: #E27396;
+    border-bottom: 0.2rem solid #E27396;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "autumn";
+}
+.tarea span {
+    font-size: 3.5rem;
+    text-align: left;
+    padding-right: 1rem;
+}
+.contenedorBoton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+}
+.contenedorBoton .botonCompletar,
+.contenedorBoton .botonBorrar{
+    border: none;
+    cursor: pointer; 
+    color:#E27396;
+    font-size: 3rem;
+    background-color: transparent;
+}
+.contenedorBoton .botonCompletar{
+    margin-right: 1rem;
+}
+.contenedorBoton .botonBorrar i,
+.contenedorBoton .botonCompletar i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.completada {
+    text-decoration: line-through;
+    color: #E4E4E5;
+}
+
+@media (min-width: 601px) {
+
+    .contenedorPrincipal {
+        width: 70%;
+        height: 80vh;
+    }
+    h1 {
+        font-size: 6rem;
+    }
+    .ingresarTarea {
+        width: 100%;
+        font-size: 2rem;
+    }
+    .agregar {
+        width: 6rem;
+        height: 5rem;
+    }
+    .tarea span {
+        font-size: 4rem;
+    }
+    .contenedorBoton .botonCompletar,
+    .contenedorBoton .botonBorrar {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contenedorPrincipal {
+            width: 40%;
+            height: 90vh;
+        }
+}
+
+@media (min-width: 1440px) {
+.contenedorPrincipal {
+        width: 30%;
+        height: 90vh;
+    }
+}
